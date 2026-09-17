@@ -29,12 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.lblLocation = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            //
+            // lblLocation
+            //
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lblLocation.Location = new System.Drawing.Point(30, 30);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(200, 25);
+            this.lblLocation.TabIndex = 0;
+            this.lblLocation.Text = "Waiting for GPS...";
+            //
+            // Form1
+            //
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(400, 150);
+            this.Controls.Add(this.lblLocation);
+            this.Name = "Form1";
+            this.Text = "GPS Location";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblLocation;
     }
 }
 
